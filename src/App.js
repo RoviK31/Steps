@@ -6,7 +6,14 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
-export default function App() {
+export default function App (){
+  return <div>
+      <Steps />
+
+  </div>
+}
+
+ function Steps() {
 // step 1  create state variable
  const [step, setStep]  = useState(1)
 const [isOpen, setIsOpen] = useState(true)
@@ -26,7 +33,7 @@ function handleNext(){
  }
 
   return (
-    <>
+    <div>
     <button className="close" onClick={()=> setIsOpen(is => !is)}>
       &times;
     </button>
@@ -56,5 +63,5 @@ function handleNext(){
     </div>
     )
 }  
-    </>)
+    </div>)
 }
